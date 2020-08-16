@@ -1,0 +1,15 @@
+corrent, aim = map(int, input().split())
+diff = corrent - aim
+count = 0
+botton = [10, 5, 1]
+
+for i in botton:
+  if diff < 0:
+    diff = -diff
+  while(diff >= i - 2 and diff != 0):
+    diff -= i
+    count += 1
+  if diff == 0:
+    break
+
+print(count)
