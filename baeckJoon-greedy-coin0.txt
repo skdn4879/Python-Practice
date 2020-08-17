@@ -1,0 +1,14 @@
+n, k = map(int, input().split())
+coin = []
+count = 0
+
+for i in range(n):
+  coin.append(int(input())) #동전의 가치 입력
+
+coin = coin[::-1] #큰 수 부터 계산하기 편하므로 뒤집어준다.
+
+for i in coin:
+  count += int(k / i)
+  k = int(k % i)
+
+print(count)
