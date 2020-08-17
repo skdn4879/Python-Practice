@@ -1,0 +1,10 @@
+pay = int(input()) #값 입력
+rest = [50000, 10000, 5000, 1000, 500, 100, 50, 10] #거스름돈 목록
+count = 0
+
+#큰 수 부터 나눈 몫이 거스름 횟수
+for i in rest:
+  count += int(pay / i)
+  pay = (int(pay) % i) #거슬러준 나머지
+
+print(count)
